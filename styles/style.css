@@ -1,0 +1,92 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+
+.sidebar a {
+    display: block;
+    color: black;
+    /* padding: 16px; */
+    text-decoration: none;
+  }
+  
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .sidebar a.hover {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  div.content {
+    margin-left: 250px;
+    padding: 1px 16px;
+    height: 1
+    000px;
+  }
+
+  a:link {
+    background-color: yellow;
+  }  
+
+  @font-face {
+    font-family: 'CourierPrime';
+    src: url('fonts/CourierPrime-Regular.ttf');
+  }
+
+  body {
+    font-family: 'CourierPrime', monospace, sans-serif;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    line-height: 1.25em;
+  }
+
+  html, body { padding: 0; margin: 0; }
+.image-grid div {
+  width: 25%;
+  height: 240px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image01 { background-image: url('../images/PXL_20220220_111317983~2.jpg'); }
+.image02 { background-image: url('../images/PXL_20221019_153727896.MP.jpg'); }
+.image03 { background-image: url('../images/PXL_20221022_224755477.NIGHT.jpg'); }
+.image04 { background-image: url('../images/PXL_20230129_070549860.jpg'); }
+/* .image05 { background-image: url('../images/PXL_20230129_070720222.jpg'); }
+.image06 { background-image: url('../images/'); }
+.image07 { background-image: url('../images/'); }
+.image08 { background-image: url('../images/'); }
+.image09 { background-image: url('../images/'); }
+.image10 { background-image: url('../images/'); }
+.image11 { background-image: url('../images/'); }
+.image12 { background-image: url('../images/'); } */
+
+@media screen and (max-width: 400px) {
+  .image-grid {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+  .image-grid div { width: 100%; }
+}
+
+td[rowspan] {
+    vertical-align: top;
+    text-align: right;
+  }
+
+  tr.spaceUnder>td {
+    padding-bottom: 1em;
+  }
