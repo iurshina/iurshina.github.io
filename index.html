@@ -4,8 +4,8 @@
 <head>
     <link rel="stylesheet" href="styles/style.css">
 
-    <meta property="title" content="Anastasiia Iurshina"/>
-	<meta property="site_name" content="Anastasiia Iurshina"/>
+    <meta property="title" content="Anastasiia Iurshina" />
+    <meta property="site_name" content="Anastasiia Iurshina" />
 </head>
 
 <body>
@@ -31,8 +31,11 @@
         <br>
 
         <h2 id="about">About</h2>
-        Hi, I'm Ana, a backend software engineer and a machine learning researcher. I have more than 7 years of software development experience in industry and around 3.5 years of research experience, mostly in applying deep learning methods to natural language processing tasks.
-        
+        Hi, I'm Ana, a backend software engineer and a machine learning researcher. I have more than 7 years of software
+        development experience in industry and around 3.5 years of research experience, mostly in applying deep learning
+        methods to natural language processing tasks (Entity Linking, Named Entity Recognition, Automatic Text
+        Summarization, etc).
+
         <br>
         This is pretty much a clickable version of my CV, plus a tiny additon of some personal info (Books and Pictures
         sections).
@@ -48,7 +51,8 @@
             <li>Art (involving computers or not)</li>
         </ul>
 
-        If you happen to have any ideas related to these topics and you need techical help or just someone to collaborate with, feel free to contact me (by email: anastasiia.iurshina @ gmail.com or on linkedin). 
+        If you happen to have any ideas related to these topics and you need techical help or just someone to
+        collaborate with, feel free to contact me (by email: anastasiia.iurshina @ gmail.com or on linkedin).
 
 
 
@@ -83,7 +87,7 @@
             <tr class="spaceUnder">
                 <td><strong>04.2018 <br> 09.2019</strong></td>
                 <td>Software Developer for NLP at <strong>Sony, Speech and Sound group</strong><br>
-                    <em>Tasks:</em> investigation and implementing different tasks from the area of text processing
+                    <em>Tasks:</em> investigation and implementation of different tasks in the area of text processing
                     (tokenization, sentence segmentation, POS tagging, etc)<br>
                     <em>Environment:</em> Java, Git, Python, C++
                 </td>
@@ -147,9 +151,14 @@
             <tr>
                 <td>Machine Learning</td>
                 <td>****<FONT COLOR="grey">*</FONT>
-                </tr>
+            </tr>
             <tr>
-                <td>Transformers</td>
+            <tr>
+                <td>Deep Learning</td>
+                <td>****<FONT COLOR="grey">*</FONT>
+            </tr>
+            <tr>
+                <td>Transformers package</td>
                 <td>*****</td>
             </tr>
             <tr>
@@ -198,41 +207,58 @@
         <h2 id="projects">Recent projects</h2>
         <button type="button" class="collapsible">Entity Linking dataset (NILK)</button>
         <div class="col_content">
-            <p>The NIL-linking task in Entity Linking deals with cases where the text mentions do not have a corresponding entity in the associated knowledge base. NIL-linking has two sub-tasks: NIL-detection and NIL-disambiguation. NIL-detection identifies NIL-mentions in the text. Then, NIL-disambiguation determines if some NIL-mentions refer to the same out-of-knowledge base entity. Although multiple existing datasets can be adapted for NIL-detection, none of them address the problem of NIL-disambiguation. This paper presents NILK, a new dataset for NIL-linking processing, constructed from WikiData and Wikipedia dumps from two different timestamps. The NILK dataset has two main features: 1) It marks NIL-mentions for NIL-detection by extracting mentions which belong to newly added entities in Wikipedia text. 2) It provides an entity label for NIL-disambiguation by marking NIL-mentions with WikiData IDs from the newer dump. We make available the annotated dataset along with the code1. The NILK dataset is available at: https://zenodo.org/record/6607514</p>
+            <p>The NIL-linking task in Entity Linking deals with cases where the text mentions do not have a
+                corresponding entity in the associated knowledge base. We created a dataset for this task. <br/>
+
+                To achive this, we compared two snapshots of WikiData (from different timestamps), found entites that are in the later snapshot but absent from the older one. For this entities we extracted corresponding text from Wikipedia.
+                
+                <br/>
+                More information can be found in the <a href="https://dl.acm.org/doi/abs/10.1145/3511808.3557659">paper</a>.
+                
+                <br/>
+                The dataset is available at <a href=" https://zenodo.org/record/6607514">zenodo</a>
+            </p>
         </div>
 
         <button type="button" class="collapsible">Producer-consumer app prototype</button>
         <div class="col_content">
-            <p> <a href="https://github.com/iurshina/example_prod_consm_project">Code on github</a></p>
+            <p>
+                A prototype of a pipeline for processing of .tmx files (xml-like files used for translation annotation). Relies on the producer-consumer architecture (implemented using Kafka). 
+                <br />
+                <em>Stack</em>: Python, Kafka, Docker
+                <br />
+                <a href="https://github.com/iurshina/example_prod_consm_project">Code on github</a>
+            </p>
         </div>
 
         <button type="button" class="collapsible">Multilingual named entity recognition</button>
         <div class="col_content">
-            <p>TODO</p>
-            <a href="https://aclanthology.org/2020.repl4nlp-1.14/">Publication</a>
+            <p>In this work, we explored multilingual methods for the extraction of temporal expressions
+                from text and investigated adversarial training for aligning embedding spaces to one common space. </br>
+
+            The work resulted in the <a href="https://aclanthology.org/2020.repl4nlp-1.14/">publication</a></p>
         </div>
 
         <button type="button" class="collapsible">Aspect-based automatic summarizaton</button>
         <div class="col_content">
-            <p>TODO</p>
+            <p>During my internship at Amazon (2020) I worked on automatic summarization of user reviews. <br />
+                <em>Stack</em>: Python, Tensorflow, USE (universal sentence encoder), BERT
+            </p>
         </div>
 
         <button type="button" class="collapsible">Fiction summarizaton</button>
         <div class="col_content">
-            <p>My master thesis adressed the problem of fiction summarization using transformers. 
-               TODO
+            <p>My master thesis (2020) addressed the problem of fiction summarization using transformers. <br /> I tried
+                different training and pre-training settings, and different architectures (vanilla transformer, GPT-2),
+                looked into the attention distribution and analyzed errors. The best solution (though still very prone
+                to hallucinations) consisted of a pre-processing step with extraction of "main" sentences followed by
+                summarization by GPT-2.
+                <br />
+                The pre-processing step relied on k-means clustering of sentences encoded with universal sentence
+                encoder. I took 2-3 sentences closest to the centroid of a cluster for each paragraph. <br />
+                <em>Stack</em>: Python, Pytorch, USE (universal sentence encoder), scikit-learn
             </p>
         </div>
-
-        <!-- <button type="button" class="collapsible">Detection of zero-derived verbs</button>
-        <div class="col_content">
-            <p>TODO</p>
-        </div>
-
-        <button type="button" class="collapsible">POS with multiple options</button>
-        <div class="col_content">
-            <p>While working at Sony, I implemeted a POS-tagging system which proposed different part-of-speech tags with the corresponding probabilities. This system replaced the one which only gace the most likely option.</p>
-        </div> -->
 
         <script>var coll = document.getElementsByClassName("collapsible");
             var i;
@@ -261,8 +287,8 @@
                 <td><strong>03.2020 </strong></td>
                 <td>Master Degree in Computational Linguistics at University of Stuttgart</br>
                     <em>Selected coursework:</em> Machine Learning, Reinforcement Learning, Deep Learning
-                        for NLP, Advanced Computational Semantics, Advanced Semantics, Lexical Semantics
-                    </td>
+                    for NLP, Advanced Computational Semantics, Advanced Semantics, Lexical Semantics
+                </td>
             </tr>
             <tr>
                 <td><strong>07.2010</strong></td>
@@ -308,7 +334,8 @@
         A list of books I read recently (or not so recently but like to bring up on every possible occasion).
         <h3>Tech</h3>
         <ul>
-            <li>"Designing Machine Learning Systems: An Iterative Process for Production-Ready Applications", Chip Huyen</li>
+            <li>"Designing Machine Learning Systems: An Iterative Process for Production-Ready Applications", Chip Huyen
+            </li>
             <li>"The Hundred-Page Machine Learning Book", Andriy Burkov</li>
             <li>"Pro Git", Scott Chacon and Ben Straub</li>
             <li>"Rust", Steve Klabnik and Carol Nichols</li>
@@ -317,7 +344,7 @@
         <h3>Culture&Theory</h3>
         <ul>
             <li>"Cultural Studies. Theory and Practice", Chris Barker</li>
-            <li>"American Originality: Essays on Poetry, Louise Glück</li>
+            <li>"American Originality: Essays on Poetry", Louise Glück</li>
             <li>"The Queer Art of Failure", J. Jack Halberstam</li>
             <li>"Metamodernism: Historicity, Affect, and Depth After Postmodernism", Robin van den Akker</li>
         </ul>
@@ -337,7 +364,7 @@
         </ul>
 
         <h2 id="pictures">Pictures</h2>
-      
+
         Just to give you an idea what I'm doing when I'm not debugging
         or reading.
 
@@ -349,13 +376,13 @@
             <div class="image03"></div>
             <div class="image04"></div>
             <div class="image05"></div>
-        <div class="image06"></div>
-        <div class="image07"></div>
-        <div class="image08"></div>
-        <div class="image09"></div>
-        <div class="image10"></div>
-        <div class="image11"></div>
-        <div class="image12"></div>
+            <div class="image06"></div>
+            <div class="image07"></div>
+            <div class="image08"></div>
+            <div class="image09"></div>
+            <div class="image10"></div>
+            <div class="image11"></div>
+            <div class="image12"></div>
         </div>
     </div>
 </body>
