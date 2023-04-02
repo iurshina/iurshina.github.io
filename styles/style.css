@@ -5,7 +5,6 @@
     position: fixed;
     height: 100%;
     overflow: auto;
-    text-size-adjust: none;
   }
 
 .sidebar a {
