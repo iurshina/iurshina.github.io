@@ -47,7 +47,9 @@
 
   @font-face {
     font-family: 'CourierPrime';
-    src: url('fonts/CourierPrime-Regular.ttf');
+    src: url('fonts/CourierPrime-Regular.eot'); /* IE9 Compat Modes */
+    src: url('fonts/CourierPrime-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('fonts/CourierPrime-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
   }
 
   body {
