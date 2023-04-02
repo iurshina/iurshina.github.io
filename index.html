@@ -198,9 +198,15 @@
             <p>The NIL-linking task in Entity Linking deals with cases where the text mentions do not have a corresponding entity in the associated knowledge base. NIL-linking has two sub-tasks: NIL-detection and NIL-disambiguation. NIL-detection identifies NIL-mentions in the text. Then, NIL-disambiguation determines if some NIL-mentions refer to the same out-of-knowledge base entity. Although multiple existing datasets can be adapted for NIL-detection, none of them address the problem of NIL-disambiguation. This paper presents NILK, a new dataset for NIL-linking processing, constructed from WikiData and Wikipedia dumps from two different timestamps. The NILK dataset has two main features: 1) It marks NIL-mentions for NIL-detection by extracting mentions which belong to newly added entities in Wikipedia text. 2) It provides an entity label for NIL-disambiguation by marking NIL-mentions with WikiData IDs from the newer dump. We make available the annotated dataset along with the code1. The NILK dataset is available at: https://zenodo.org/record/6607514</p>
         </div>
 
+        <button type="button" class="collapsible">Producer-consumer app prototype</button>
+        <div class="col_content">
+            <p> <a href="https://github.com/iurshina/example_prod_consm_project">Code on github</a></p>
+        </div>
+
         <button type="button" class="collapsible">Multilingual named entity recognition</button>
         <div class="col_content">
             <p>TODO</p>
+            <a href="https://aclanthology.org/2020.repl4nlp-1.14/">Publication</a>
         </div>
 
         <button type="button" class="collapsible">Aspect-based automatic summarizaton</button>
@@ -210,10 +216,12 @@
 
         <button type="button" class="collapsible">Fiction summarizaton</button>
         <div class="col_content">
-            <p>My master thesis adressed the problem of fiction summarization using transformers. </p>
+            <p>My master thesis adressed the problem of fiction summarization using transformers. 
+               TODO
+            </p>
         </div>
 
-        <button type="button" class="collapsible">Detection of zero-derived verbs</button>
+        <!-- <button type="button" class="collapsible">Detection of zero-derived verbs</button>
         <div class="col_content">
             <p>TODO</p>
         </div>
@@ -221,7 +229,7 @@
         <button type="button" class="collapsible">POS with multiple options</button>
         <div class="col_content">
             <p>While working at Sony, I implemeted a POS-tagging system which proposed different part-of-speech tags with the corresponding probabilities. This system replaced the one which only gace the most likely option.</p>
-        </div>
+        </div> -->
 
         <script>var coll = document.getElementsByClassName("collapsible");
             var i;
