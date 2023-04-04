@@ -1,66 +1,79 @@
 .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 13%;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    text-size-adjust: none;
-  }
+  margin: 0;
+  padding: 0;
+  width: 13%;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  text-size-adjust: none;
+}
 
 .sidebar a {
-    display: block;
-    color: black;
-    /* padding: 16px; */
-    text-decoration: none;
-  }
-  
-  .sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
+  display: block;
+  color: black;
+  /* padding: 16px; */
+  text-decoration: none;
+}
 
-  .sidebar a.hover {
-    background-color: #04AA6D;
-    color: white;
-  }
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
 
-  h2:before {
-    content: ">";
-    color: aqua;
+.sidebar a.hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
   }
+}
+
+h2:before {
+  content: ">";
+  color: aqua;
+}
+
 /* 
    h2:after {
     content: "<";
     color: aqua;
   } */
 
-  div.content {
-    margin-left: 15%;
-    padding: 1px 16px;
-    height: 1
-    000px;
-  }
+div.content {
+  margin-left: 15%;
+  padding: 1px 16px;
+  height: 1 000px;
+}
 
-  a:link {
-    background-color: yellow;
-  }  
+a:link {
+  background-color: yellow;
+}
 
-  @font-face {
-    font-family: 'CourierPrime';
-    src: url('fonts/CourierPrime-Regular.eot'); /* IE9 Compat Modes */
-    src: url('fonts/CourierPrime-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-         url('fonts/CourierPrime-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
-  }
+@font-face {
+  font-family: 'CourierPrime';
+  src: url('fonts/CourierPrime-Regular.eot');
+  /* IE9 Compat Modes */
+  src: url('fonts/CourierPrime-Regular.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url('fonts/CourierPrime-Regular.ttf') format('truetype');
+  /* Safari, Android, iOS */
+}
 
-  body {
-    font-family: 'CourierPrime', monospace, sans-serif;
-    /* font-size: 16px; */
-    text-rendering: optimizeLegibility;
-    line-height: 1.25em;
-  }
+body {
+  font-family: 'CourierPrime', monospace, sans-serif;
+  /* font-size: 16px; */
+  text-rendering: optimizeLegibility;
+  line-height: 1.25em;
+}
 
-  html, body { padding: 0; margin: 0; }
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
 
 .image-grid div {
   width: 25%;
@@ -76,72 +89,113 @@
   padding-top: 10px;
 }
 
-.image01 { background-image: url('../images/PXL_20220220_111317983~2.jpg'); }
-.image02 { background-image: url('../images/PXL_20221019_153727896.MP.jpg'); }
-.image03 { background-image: url('../images/PXL_20221022_224755477.NIGHT.jpg'); }
-.image04 { background-image: url('../images/PXL_20230129_070549860.jpg'); }
-.image05 { background-image: url('../images/PXL_20230129_070720222.jpg'); }
-.image06 { background-image: url('../images/PXL_20211231_144223512.jpg'); }
-.image07 { background-image: url('../images/PXL_20220402_121511681.jpg'); }
-.image08 { background-image: url('../images/PXL_20220905_063202752~2.jpg'); }
-.image09 { background-image: url('../images/PXL_20221023_160217751.jpg'); }
-.image10 { background-image: url('../images/PXL_20230129_070832198.MP.jpg'); }
-.image11 { background-image: url('../images/PXL_20230129_085022305.MP~2.jpg'); }
-.image12 { background-image: url('../images/PXL_20230308_100733909.jpg'); }
+.image01 {
+  background-image: url('../images/PXL_20220220_111317983~2.jpg');
+}
+
+.image02 {
+  background-image: url('../images/PXL_20221019_153727896.MP.jpg');
+}
+
+.image03 {
+  background-image: url('../images/PXL_20221022_224755477.NIGHT.jpg');
+}
+
+.image04 {
+  background-image: url('../images/PXL_20230129_070549860.jpg');
+}
+
+.image05 {
+  background-image: url('../images/PXL_20230129_070720222.jpg');
+}
+
+.image06 {
+  background-image: url('../images/PXL_20211231_144223512.jpg');
+}
+
+.image07 {
+  background-image: url('../images/PXL_20220402_121511681.jpg');
+}
+
+.image08 {
+  background-image: url('../images/PXL_20220905_063202752~2.jpg');
+}
+
+.image09 {
+  background-image: url('../images/PXL_20221023_160217751.jpg');
+}
+
+.image10 {
+  background-image: url('../images/PXL_20230129_070832198.MP.jpg');
+}
+
+.image11 {
+  background-image: url('../images/PXL_20230129_085022305.MP~2.jpg');
+}
+
+.image12 {
+  background-image: url('../images/PXL_20230308_100733909.jpg');
+}
 
 @media screen and (max-width: 400px) {
   .image-grid {
     flex-direction: column;
     flex-wrap: no-wrap;
   }
-  .image-grid div { width: 100%; }
+
+  .image-grid div {
+    width: 100%;
+  }
 }
 
 td[rowspan] {
-    vertical-align: top;
-    text-align: right;
-  }
+  vertical-align: top;
+  text-align: right;
+}
 
-  tr.spaceUnder>td {
-    padding-bottom: 1em;
-  }
+tr.spaceUnder>td {
+  padding-bottom: 1em;
+}
 
-  .paddingBetweenCols td {
-    padding: 0 15px;
-  }
+.paddingBetweenCols td {
+  padding: 0 15px;
+}
 
-  .collapsible {
-    background-color: white;
-    border-color: aqua;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border-style: solid;
-    text-align: left;
-    outline: none;
-    /* font-size: 15px; */
-    font-family: 'CourierPrime', monospace, sans-serif;
-  }
+.collapsible {
+  background-color: white;
+  border-color: aqua;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border-style: solid;
+  text-align: left;
+  outline: none;
+  /* font-size: 15px; */
+  font-family: 'CourierPrime', monospace, sans-serif;
+}
 
-  .col_content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
+.col_content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
 
-  .active, .collapsible:hover {
-    background-color: yellow;
-  }
+.active,
+.collapsible:hover {
+  background-color: yellow;
+}
 
-  .collapsible:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    /* font-size: 13px; */
-    color: white;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
+.collapsible:after {
+  content: '\02795';
+  /* Unicode character for "plus" sign (+) */
+  /* font-size: 13px; */
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
+}
