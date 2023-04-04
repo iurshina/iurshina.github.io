@@ -29,6 +29,9 @@
   .sidebar {
     display: none;
   }
+  .sidebar a {
+    display: none;
+  }
 }
 
 h2:before {
