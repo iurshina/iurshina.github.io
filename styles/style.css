@@ -25,15 +25,6 @@
   color: white;
 }
 
-@media screen and (max-width: 799px) {
-  .sidebar {
-    display: none;
-  }
-  .sidebar a {
-    display: none;
-  }
-}
-
 h2:before {
   content: ">";
   color: aqua;
@@ -49,6 +40,18 @@ div.content {
   margin-left: 15%;
   padding: 1px 16px;
   height: 1 000px;
+}
+
+@media screen and (max-width: 799px) {
+  .sidebar {
+    display: none;
+  }
+  .sidebar a {
+    display: none;
+  }
+  div.content {
+    margin-left: 0%;
+  }
 }
 
 a:link {
